@@ -1,45 +1,7 @@
-# ENIMDA
+# ENIMDA Demo
 
-ENtropy-based IMage border Detection Algorithm: finds out if your image has
-borders or whitespaces around and helps you to trim border from your image by
-providing approximate whitespace offsets for every side of a picture.
+Demonstration for [ENIMDA](https://github.com/embali/enimda/) library
 
-
-## Algorithm
-
-For each side of the image starting from the top, clockwise:
-- Get upper block with 25% height of the dimension opposite to current side
-- Get lower block with the same height as the upper one (50% of image total)
-- Calculate entropy for both blocks
-- Find their entropies difference
-- Make upper block 1px less
-- Repeat from p.2 until we hit image edge
-- Get maximum (minimum) of the entropies difference
-- Here we have a border center if it lies closer to the edge rather than to the 
-center of image and entropies difference is lower than pre-set threshold
-
-
-## Prerequisites
-
-- Ubuntu 16.04 x64
-
-
-## Dependencies
-
-- Python 3.5
-- Pillow 3.2
-- NumPy 1.11
-
-
-## Install Python 3.5
-
-```
-sudo add-apt-repository ppa:fkrull/deadsnakes
-
-sudo apt-get update
-
-sudo apt-get install python3.5 python3.5-venv python3.5-dev
-```
 
 ## Setup environment and packages
 
@@ -55,7 +17,7 @@ pip install -r requirements.txt
 ## Run
 
 ```
-python app.py
+python demo.py
 ```
 
 
