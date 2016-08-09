@@ -33,12 +33,5 @@ each image has its borders outlined for visual demonstration
 ## Accuracy
 
 Using included examples each resized to 300px for its minimal side and current
-threshold value (0.5), detection rate for  bordered images is 82%, false
+threshold value (0.5), detection rate for bordered images is 81%, false
 detection rate for clear images is 7%
-
-
-## Performance
-
-With current settings one image is getting processed within 4-5 seconds for
-scan mode and 5-15 seconds for detect mode on Intel® Pentium(R) CPU 2117U @
-1.80GHz × 2 with 4 Gb RAM
