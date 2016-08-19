@@ -34,5 +34,8 @@ each image has its borders outlined for visual demonstration
 
 Using included examples each resized to 300px for its minimal side and current
 threshold value (0.5), detection rate for bordered images is 81.2%, false
-detection rate for clear images is 6.9%, with parameter rand set to 0.05 (5%)
-detection becomes 10 times faster and these rates are 77.2% and 7.9% respectively
+detection rate for clear images is 6.9%
+
+With parameter rand set to 0.05 (5%) detection becomes 10 times faster and these
+rates are 77.2% and 7.9% respectively, but using rand you may get unstable result
+for borders attribute - it depends on image nature and structure
