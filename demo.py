@@ -33,7 +33,7 @@ for index, name in enumerate(source_bordered_files):
     im = im.resize((w, h))
     em = ENIMDA(image=im)
     t = time.time()
-    em.scan(fast=True, rand=RAND)
+    em.scan(rand=RAND, fast=True)
     t = time.time() - t
     rate += int(em.has_borders)
     em.outline()
@@ -51,7 +51,7 @@ for index, name in enumerate(source_clear_files):
     im = im.resize((w, h))
     em = ENIMDA(image=im)
     t = time.time()
-    em.scan(fast=True, rand=RAND)
+    em.scan(rand=RAND, fast=True)
     t = time.time() - t
     rate += int(em.has_borders)
     em.outline()
