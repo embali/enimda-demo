@@ -2,8 +2,6 @@ from os import listdir
 from os.path import join, isfile
 import time
 
-from PIL import Image
-
 from enimda import ENIMDA
 
 
