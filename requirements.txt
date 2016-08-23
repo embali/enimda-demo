@@ -1,3 +1,4 @@
--e git://github.com/embali/enimda.git@c2342cc96c414d52a61c28bd698f296f0a2bf9e4#egg=enimda
+-e git://github.com/embali/enimda.git@c411415ec47ad85ed96793ff78088ebe06995291#egg=enimda
 numpy==1.11.0
 Pillow==3.2.0
+Wand==0.4.3

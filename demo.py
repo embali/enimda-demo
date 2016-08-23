@@ -22,22 +22,18 @@ source_bordered_files = sorted(_ for _ in listdir(SOURCE_BORDERED_PATH)
 
 
 SIZE = 300      # Resize to 300px
-RAND = 0.05     # Use 5 percent of all columns
+STRIPES = 0.05  # Use 5 percent of all columns
 
 # Process bordered images
 rate = 0
 for index, name in enumerate(source_bordered_files):
-    im = Image.open(join(SOURCE_BORDERED_PATH, name))
-    w, h = im.size
-    w, h = (int(SIZE * w / h), SIZE) if w > h else (SIZE, int(SIZE * h / w))
-    im = im.resize((w, h))
-    em = ENIMDA(image=im)
+    em = ENIMDA(file_=join(SOURCE_BORDERED_PATH, name), minimize=SIZE)
     t = time.time()
-    em.scan(rand=RAND, fast=True)
+    em.scan(stripes=STRIPES, fast=True)
     t = time.time() - t
     rate += int(em.has_borders)
     em.outline()
-    em.image.save(join(DETECTED_BORDERED_PATH, name))
+    em.save(file_=join(DETECTED_BORDERED_PATH, name))
     print(t, index, name, em.has_borders, em.borders)
 
 print(rate / len(source_bordered_files))
@@ -45,17 +41,13 @@ print(rate / len(source_bordered_files))
 # Process clear images
 rate = 0
 for index, name in enumerate(source_clear_files):
-    im = Image.open(join(SOURCE_CLEAR_PATH, name))
-    w, h = im.size
-    w, h = (int(SIZE * w / h), SIZE) if w > h else (SIZE, int(SIZE * h / w))
-    im = im.resize((w, h))
-    em = ENIMDA(image=im)
+    em = ENIMDA(file_=join(SOURCE_CLEAR_PATH, name), minimize=SIZE)
     t = time.time()
-    em.scan(rand=RAND, fast=True)
+    em.scan(stripes=STRIPES, fast=True)
     t = time.time() - t
     rate += int(em.has_borders)
     em.outline()
-    em.image.save(join(DETECTED_CLEAR_PATH, name))
+    em.save(file_=join(DETECTED_CLEAR_PATH, name))
     print(t, index, name, em.has_borders, em.borders)
 
 print(rate / len(source_clear_files))
