@@ -1,4 +1,2 @@
--e git://github.com/embali/enimda.git@f5cdbcc9bdff59a0c1a8bf0eebd961decaeeb92e#egg=enimda
-numpy==1.11.0
-Pillow==3.2.0
-Wand==0.4.3
+-e git://github.com/embali/images2gif.git#egg=images2gif-1.0.0
+-e git://github.com/embali/enimda.git#egg=enimda-1.1.2
