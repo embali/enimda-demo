@@ -32,10 +32,13 @@ each image has its borders outlined for visual demonstration
 
 ## Accuracy
 
-Using included examples each resized to 300px for its minimal side and current
-threshold value (0.5), detection rate for bordered images is 81.2%, false
-detection rate for clear images is 6.9%
+Using included examples each minimized to 300px and default threshold value (0.5),
+detection rate for bordered images is 81.2%, false detection rate for clear images
+is 6.9%
 
-With parameter rand set to 0.05 (5%) detection becomes 10 times faster and these
-rates are 74-78% and 6-7% respectively, but using rand you may get unstable result
-for borders attribute - it depends on image nature and structure
+With parameter stripes set to 0.05 (5%) detection becomes 10 times faster and these
+rates are 74-78% and 6-7% respectively
+
+Please be notified that using stripes (max_stripes) or frames (max_frames)
+parameters may lead to unstable result for borders attribute - it would depend
+on image nature and structure
