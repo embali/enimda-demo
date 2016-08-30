@@ -25,13 +25,13 @@ STRIPES = 0.05  # Use 5 percent of all columns
 # Process bordered images
 rate = 0
 for index, name in enumerate(source_bordered_files):
-    em = ENIMDA(file_=join(SOURCE_BORDERED_PATH, name), minimize=SIZE)
+    em = ENIMDA(fp=join(SOURCE_BORDERED_PATH, name), minimize=SIZE)
     t = time.time()
     em.scan(stripes=STRIPES, fast=True)
     t = time.time() - t
     rate += int(em.has_borders)
     em.outline()
-    em.save(file_=join(DETECTED_BORDERED_PATH, name))
+    em.save(fp=join(DETECTED_BORDERED_PATH, name))
     print(t, index, name, em.has_borders, em.borders)
 
 print(rate / len(source_bordered_files))
@@ -39,13 +39,13 @@ print(rate / len(source_bordered_files))
 # Process clear images
 rate = 0
 for index, name in enumerate(source_clear_files):
-    em = ENIMDA(file_=join(SOURCE_CLEAR_PATH, name), minimize=SIZE)
+    em = ENIMDA(fp=join(SOURCE_CLEAR_PATH, name), minimize=SIZE)
     t = time.time()
     em.scan(stripes=STRIPES, fast=True)
     t = time.time() - t
     rate += int(em.has_borders)
     em.outline()
-    em.save(file_=join(DETECTED_CLEAR_PATH, name))
+    em.save(fp=join(DETECTED_CLEAR_PATH, name))
     print(t, index, name, em.has_borders, em.borders)
 
 print(rate / len(source_clear_files))
