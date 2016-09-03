@@ -1,2 +1,2 @@
 -e git://github.com/embali/images2gif.git@1.0.0#egg=images2gif
--e git://github.com/embali/enimda.git@1.1.4#egg=enimda
+-e git://github.com/embali/enimda.git@1.1.5#egg=enimda
